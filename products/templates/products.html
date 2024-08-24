@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Produtos (SCP)</title>
+    </head>
+    <body>  
+        {% for product in products %}
+             {{ product.title }} - R$ {{ product.price }} - {{ product.brand}} <br>
+        {% endfor %}
+    </body>
+</html>

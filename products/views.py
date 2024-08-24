@@ -1,6 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from products.models import product
 
 def product_view(request):
-    return HttpResponse('Hello World!')
+    products = product.objects.all()
+    return render(
+        request=request,
+        template_name='products.html',
+        context={'products': products},
+    ) 
+
 
